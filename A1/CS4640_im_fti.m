@@ -5,10 +5,11 @@ function im_FTi = CS4640_FTi(im)
 % On output:
 % im_FTi (MxN float array): inverse Fourier Transform of im
 % Call:
-2
 % im_FTi = CS4640_FTi(im);
 % Author:
-% <Your name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %
+
+end

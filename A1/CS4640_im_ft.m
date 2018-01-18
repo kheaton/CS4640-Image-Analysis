@@ -7,7 +7,9 @@ function im_FT = CS4640_FT(im)
 % Call:
 % im_FT = CS4640_FT(im);
 % Author:
-% <Your name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %
+
+end
