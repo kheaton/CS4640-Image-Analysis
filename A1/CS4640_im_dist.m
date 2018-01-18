@@ -16,7 +16,7 @@ function imd = CS4640_im_dist(im1,im2)
 [m1,n1,p1] = size(im1);
 [m2,n2,p2] = size(im2);
 
-if m1 ~= m2 & n1 ~= n2 & p1 ~= p2
+if m1 ~= m2 | n1 ~= n2 | p1 ~= p2
     imd = [];
     return
 end
