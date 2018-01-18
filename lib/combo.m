@@ -35,3 +35,4 @@ end
 %clf;
 X = double(X);
 imshow(X);
+end

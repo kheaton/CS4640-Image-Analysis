@@ -58,3 +58,4 @@ plot(ptsr(1,:),ptsr(2,:),'g+');
 
 ptsb = T_rot*T_trans*pts
 plot(ptsb(1,:),ptsb(2,:),'bx');
+end
