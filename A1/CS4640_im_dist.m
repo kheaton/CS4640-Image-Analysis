@@ -8,7 +8,7 @@ function imd = CS4640_im_dist(im1,im2)
 % Call:
 % imd = CS4640_im_dist(im1,im2);
 % Author:
-% <Your Name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %

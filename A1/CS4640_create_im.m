@@ -14,7 +14,7 @@ function im = CS4640_create_im(f_name,M,N,Q,x_min,x_max,y_min,y_max)
 % Call:
 % im = CS4640_create_im(’CS4640_hemisphere’,100,100,64,-4,4,-4,4);
 % Author:
-% <Your Name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %

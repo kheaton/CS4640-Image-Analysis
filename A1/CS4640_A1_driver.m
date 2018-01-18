@@ -7,7 +7,7 @@ function CS4640_A1_driver
 % Call:
 % CS4640_A1_driver
 % Author:
-% <Your name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %

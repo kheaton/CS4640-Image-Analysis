@@ -10,7 +10,7 @@ function imr = CS4640_register(ref,im,pts)
 % Call:
 % imr = CS4640_register(ref,im,pts);
 % Author:
-% <Your name>
+% Kyle Heaton
 % UU
 % Spring 2018
 %
