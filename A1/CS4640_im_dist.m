@@ -12,3 +12,5 @@ function imd = CS4640_im_dist(im1,im2)
 % UU
 % Spring 2018
 %
+
+end

@@ -19,3 +19,5 @@ CS4640_add_noise(im,p_min,p_max,noise_type,a,b,mu,sigma2)
 % UU
 % Spring 2018
 %
+
+end
