@@ -21,7 +21,7 @@ for u = 0:M - 1
         for x = 0:M - 1
             for y = 0:N - 1
                 temp = exp(1i*-2*pi*(((u*x)/M)+((v*y)/N)));
-                s = s + (im(u+1, v+1) * real(temp));
+                s = s + (im(x+1, y+1) * real(temp));
             end
         end
         im_FT(u+1,v+1) = s;
