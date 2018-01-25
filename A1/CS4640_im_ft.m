@@ -24,7 +24,7 @@ for u = 0:M - 1
                 s = s + (im(u+1, v+1) * real(temp));
             end
         end
-        im_FT(+1,v+1) = s;
+        im_FT(u+1,v+1) = s;
     end
 end
 
