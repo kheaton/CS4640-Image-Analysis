@@ -19,4 +19,25 @@ function im = CS4640_create_im(f_name,M,N,Q,x_min,x_max,y_min,y_max)
 % Spring 2018
 %
 
+im = zeros(M, N);
+func = str2func(f_name);
+
+for u = 1 : x_max - x_min
+    for v = 1 : y_max - y_min
+        x = u + x_min;
+        y = v + y_min;
+        
+        im(u, v) = func(x, y);
+    end
+end
+max_value = max(im);
+min_value = min(im);
+
+for u = 1 : x_max - x_min
+    for v = 1 : y_max - y_min
+       im(u, v) = (((Q - 1) * (im(u,v) - min_value)) / (max_value - min_value));
+    end
+end
+%im = (((Q - 1) * (im - min_value)) / (max_value - min_value));
+
 end

@@ -21,11 +21,14 @@ if m1 ~= m2 | n1 ~= n2 | p1 ~= p2
     return
 end
 
+imd = zeros(m1,n1);
+
 for r = 1:m1
     for c = 1:n1
         v1 = reshape(im1(r,c,:), [1,3]);
         v2 = reshape(im2(r,c,:), [1,3]);
-        imd(r,c) = norm(v1-v2);
+       
+        imd(r,c) = norm(double(v1 - v2));
     end
 end
 
