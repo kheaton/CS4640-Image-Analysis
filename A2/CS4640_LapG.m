@@ -8,13 +8,15 @@ function [imo,imzc] = CS4640_LapG(im,s,sigma2)
 %      imo (MxN array): LoG image
 %      imzc (MxN arry): zero-crossings
 % Call:
-%      [imo,imzc] = CS4640_LaG(T1gs,7,3);
+%      [imo,imzc] = CS4640_LapG(T1gs,7,3);
 % Author:
 %      Kyle Heaton
 %      UU
 %      Spring 2018
 %
 
+imo = [];
+imzc = [];
 warning('This function is not yet implemented');
 
 end

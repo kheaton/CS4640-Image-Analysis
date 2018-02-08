@@ -35,6 +35,6 @@ imo = CS4640_zc(greybat);
 h = CS4640_LoG(3,2,2);
 
 %LapG
-[imo,imzc] = CS4640_LaG(greybat,7,3);
+[imo,imzc] = CS4640_LapG(greybat,7,3);
 
 end

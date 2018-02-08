@@ -14,10 +14,7 @@ function h = CS4640_LoG(x,y,sigma2)
 %      Spring 2018
 %
 
+h = [];
 warning('This function is not yet implemented');
-
-%equation is in the assignment
-%fspecial laplaussian of gaussian filter
-
 
 end
