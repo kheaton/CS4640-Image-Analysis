@@ -11,7 +11,22 @@ function H_im = CS4630_Hessian(im)
 %      UU
 %      Spring 2018
 %
+[M,N] = size(im);
+H_im = zeros(M, N, 2);
 
-error('This function is not yet implemented');
+[dx, dy] = imgradient(im);
 
+[dxx, dxy] = gradient(dx);
+[dyx, dyy] = gradient(dy);
+
+for r = 1:M
+    for c = 1:N
+        h = [dxx(r,c), dxy(r,c);...
+             dyx(r,c), dyy(r,c)];
+        d = eigs(h);
+        H_im(r, c, 1) = d(1);
+        H_im(r, c, 2) = d(2);
+    end
+end
+   
 end

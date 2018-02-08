@@ -7,13 +7,17 @@ function h = CS4640_LoG(x,y,sigma2)
 % On output:
 %      h (double): LoG value
 % Call:
-%      h = CS4640_create_im_gen(3,2,2);
+%      h = CS4640_LoG(3,2,2);
 % Author:
 %      Kyle Heaton
 %      UU
 %      Spring 2018
 %
 
-error('This function is not yet implemented');
+warning('This function is not yet implemented');
+
+%equation is in the assignment
+%fspecial laplaussian of gaussian filter
+
 
 end

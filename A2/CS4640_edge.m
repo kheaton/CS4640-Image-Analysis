@@ -13,7 +13,7 @@ function [mag,ori] = CS4640_edge(im)
 %      Spring 2018
 %
 
-error('This function is not yet implemented');
-
+[dx, dy] = imgradient(im);
+[mag, ori] = imgradient(dx, dy);
 
 end

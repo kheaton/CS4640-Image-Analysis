@@ -1,4 +1,4 @@
-function im =
+function im = ...
 CS4640_create_im_gen(f_name,M,N,Q,x_min,x_max,y_min,y_max,args)
 % CS4640_create_im_gen - create an image from a function with arguments
 % On input:
@@ -21,7 +21,32 @@ CS4640_create_im_gen(f_name,M,N,Q,x_min,x_max,y_min,y_max,args)
 %      Spring 2018
 %
 
-error('This function is not yet implemented');
+im = zeros(M, N);
 
+for u = 1 : x_max - x_min
+    for v = 1 : y_max - y_min
+        x = u + x_min;
+        y = v + y_min;
+        
+        if isempty(args)
+            im(u, v) = feval(f_name, x, y);
+        else
+            im(u, v) = feval(f_name,x,y,args);
+        end
+    end
+end
 
+if Q == 0
+    return
+end
+
+max_value = max(im);
+min_value = min(im);
+
+for u = 1 : x_max - x_min
+    for v = 1 : y_max - y_min
+       im(u, v) = (((Q - 1) * (im(u,v) - min_value)) / (max_value - min_value));
+    end
+end
+%im = (((Q - 1) * (im - min_value)) / (max_value - min_value));
 end

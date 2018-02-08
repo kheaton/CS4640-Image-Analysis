@@ -15,6 +15,6 @@ function [imo,imzc] = CS4640_LapG(im,s,sigma2)
 %      Spring 2018
 %
 
-error('This function is not yet implemented');
+warning('This function is not yet implemented');
 
 end
