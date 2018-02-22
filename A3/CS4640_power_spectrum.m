@@ -13,6 +13,19 @@ function imP = CS4640_power_spectrum(im,centered)
 %      Spring 2018
 %
 
-warning('This method is not yet implemented');
+[M, N] = size(im);
+imP = zeros(M, N);
+imc = im;
+if centered == 1
+    imc = CS4640_center(imc);
+end
+
+imf = fft2(imc);
+
+for row = 1 : M
+    for col = 1 : N
+        imP(row, col) = real(imf(row, col))^2 + imag(imf(row,col))^2;
+    end
+end
 
 end

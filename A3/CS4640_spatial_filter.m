@@ -13,6 +13,14 @@ function g = CS4640_spatial_filter(im_in,H)
 %      Spring 2018
 %
 
-warning('This function is not yet implemented.');
+[Mf, Nf] = size(H);
+if Mf ~= Nf || mod(Mf, 2) == 0
+    g = [];
+    return
+end
+
+%g = imfilter(im_in, H);
+g = conv2(im_in, H);
+%use conv2
 
 end

@@ -13,7 +13,28 @@ function g = CS4640_freq_filter(im_in,H)
 %      UU
 %      Spring 2018
 %
+[M, N] = size(im_in);
+[Mf, Nf] = size(H);
+if Mf ~= Nf || mod(Mf, 2) == 0
+    g = [];
+    return
+end
+P = M + Mf + 1;
+Q = N + Nf + 1;
 
-warning('This function is not implemented');
+H_pad = CS4640_pad(H, P, Q);
+H_center = CS4640_center(H_pad);
+H_ft = fft2(H_center);
+
+f_pad = CS4640_pad(im_in, P, Q);
+f_center = CS4640_center(f_pad);
+f_ft = fft2(f_center);
+
+G_ft = f_ft .* H_ft;
+G_ift = ifft2(G_ft);
+G_real = real(G_ift);
+
+G_pad = CS4640_center(G_real);
+g = CS4640_depad(G_pad, M, N);
 
 end
