@@ -17,6 +17,25 @@ function [H,H2] = CS4640_Hough_detect(im,D)
 %      Spring 2018
 %
 
-warning('This function not yet implemented');
+[M, N] = size(im);
+maxOffset = max(D, [], 1);
+
+H = zeros(M + maxOffset(1), N + maxOffset(2));
+
+k = size(D, 1);
+
+for row = 1:M
+    for col = 1:N
+        for index = 1:k
+            x = D(index, 1) + row;
+            y = D(index, 2) + col;
+            
+            H(x, y) = H(x, y) + 1;
+        end
+    end
+end
+
+% Not sure if this is correct
+H2 = imresize(H, [M, N]);
 
 end

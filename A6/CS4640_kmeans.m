@@ -12,6 +12,15 @@ function segs = CS4640_kmeans(im,k)
 %      Spring 2018
 %
 
-warning('This function is not yet implemented');
+[M, N, p] = size(im);
+
+%reshape the image into something that kmean will understand
+linearized = double(reshape(im, M*N, p));
+
+%call k means
+k_means = kmeans(linearized, k);
+
+%reshape what kmeans gave back into an image
+segs = reshape(k_means, M, N);
 
 end
