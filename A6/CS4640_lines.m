@@ -19,6 +19,28 @@ function [lines_im,lines] = CS4640_lines(im,mag_thresh,ori_thresh)
 %      Spring 2018
 %
 
-warning('This function not yet implemeneted');
+[M, N] = size(im);
+k = size(find(im), 1);
+
+lines_im = zeros(M, N);
+lines = zeros(k, 3);
+
+[mag, ori] = imgradient(im);
+count = 1;
+for row = 1:M
+    for col = 1:N
+        %Check if magnitude and orientation is in threshold
+        if mag(row,col)-mag_thresh > 0 && ori(row,col)-ori_thresh > 0
+            
+            %I didn't have the time to get each segment and number them
+            lines_im(row, col) = 1;
+            lines(count, 1) = row;
+            lines(count, 2) = col;
+            lines(count, 3) = 1;
+            
+            count = count + 1;
+        end
+    end
+end
 
 end
